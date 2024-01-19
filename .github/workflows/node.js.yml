@@ -29,11 +29,13 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 
-    - name: semgrepper
+    - name: semgrep-action
       # You may pin to the exact commit or the version.
-      # uses: r7kamura/semgrepper@903aa1f82b5323b9b5a8383ea27cb2751f65d838
-      uses: r7kamura/semgrepper@v0.1.0
+      # uses: semgrep/semgrep-action@713efdd345f3035192eaa63f56867b88e63e4e5d
+      uses: semgrep/semgrep-action@v1
       with:
-        # --config option value for semgrep ci.
-        config: .semgrep
+        # Rules and patterns to search for with semgrep.
+
+        config: 291955cb8fedc3bcbdcb99568cc6a385371cb8fd0e5c1cb3dd21f2b86f74af0e
+          
           
